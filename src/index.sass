@@ -1,0 +1,24 @@
+@use 'src/site.sass'
+
+// Styles ---------------------------------------
+
+body
+  margin: 0
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif
+  color: site.$font-color-primary
+  background-image: site.image("talent-calc-bg.png")
+  -webkit-font-smoothing: antialiased
+  -moz-osx-font-smoothing: grayscale
+
+h1, h2
+  font-weight: normal
+
+#root
+  max-width: site.$media-size-desktop
+  margin: auto
+
+.text-secondary
+  color: site.$font-color-secondary
+
+.flex-container
+  display: flex

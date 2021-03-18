@@ -1,0 +1,35 @@
+// Variables ------------------------------------
+
+$font-color-primary: #F9F9F9
+$font-color-secondary: #395068
+
+$spacing-sm: 5px
+$spacing-md: 10px
+
+$media-size-phone: 500px
+$media-size-tablet: 750px
+$media-size-desktop: 1050px
+
+// Functions ------------------------------------
+
+@function image($name)
+  @return url("/assets/" + $name)
+
+// Mixins ---------------------------------------
+
+@mixin inline-flex-center
+  display: inline-flex
+  justify-content: center
+  align-items: center
+
+@mixin margin-y($value)
+  margin-top: $value
+  margin-bottom: $value
+
+@mixin phone
+  @media (max-width: #{$media-size-phone})
+    @content
+
+@mixin tablet
+  @media (max-width: #{$media-size-tablet})
+    @content

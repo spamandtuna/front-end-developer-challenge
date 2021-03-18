@@ -1,0 +1,30 @@
+@use "/src/site"
+
+.talent-path
+  @include site.margin-y(50px)
+  @include site.phone
+    flex-flow: column
+
+  > *
+    @include site.inline-flex-center
+
+  .talent-path-name
+    flex-basis: 175px
+    justify-content: left
+
+    @include site.phone
+      flex-basis: auto
+
+  .talents
+    flex-grow: 10
+
+  .talent-spacer
+    height: 10px
+    flex-grow: inherit
+    border: #1B1E20 1px solid
+    background-color: #1B1B1C
+    transition: border-color .5s ease, background-color .5s ease
+
+  .rune-talent.active + .talent-spacer
+    border-color: #3D3F41
+    background-color: #303133

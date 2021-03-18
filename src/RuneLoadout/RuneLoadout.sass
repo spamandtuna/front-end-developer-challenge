@@ -1,0 +1,22 @@
+@use 'src/site.sass'
+
+.rune-loadout
+  padding: site.$spacing-md
+  text-align: center
+
+  header
+    background-color: #181B1C
+
+    h1
+      padding: site.$spacing-sm
+
+  .rune-loadout-calculator
+    @include site.tablet
+      flex-flow: column-reverse
+
+  .talent-paths
+    flex: 7
+
+  .talent-points
+    @include site.inline-flex-center
+    flex: 3

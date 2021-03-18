@@ -1,0 +1,25 @@
+@use '/src/site'
+
+$borderWidth: 5px
+$borderSlice: 5
+$spriteSize: 50px
+
+.rune-talent
+  background-image: site.image("talent-icons-sprite.png")
+  background-position-y: -$spriteSize
+  border: $borderWidth solid transparent
+  border-image: site.image("talent-border-inactive.png") $borderSlice
+  cursor: pointer
+  height: $spriteSize
+  width: $spriteSize
+  min-width: $spriteSize
+
+  @for $i from 0 to 7
+    &#rune-talent-#{$i}
+      background-position-x: $i * $spriteSize
+
+  &.active
+    background-position-y: 0
+    border-image: site.image("talent-border-active.png") $borderSlice
+    box-shadow: 0 0 7px
+    z-index: 1
